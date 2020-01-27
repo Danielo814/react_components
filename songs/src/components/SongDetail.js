@@ -8,7 +8,7 @@ const SongDetail = ({ song }) => {
   return (
     <div>
       <h3>Details for: </h3>
-      {song.title}
+      <p>Title: {song.title}</p>
     </div>
   );
 };
