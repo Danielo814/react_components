@@ -1,10 +1,9 @@
 import jsonPlaceholder from "../apis/jsonPlaceholder";
 import _ from "lodash";
 
-export const fetchPostsAndUsers = () => async dispatch => {
-  console.log("About to fetch Posts");
+export const fetchPostsAndUsers = () => async (dispatch, getState) => {
   await dispatch(fetchPosts());
-  console.log("Fetched posts");
+  _.map(getState().posts, "userId");
 };
 
 export const fetchPosts = () => async dispatch => {
